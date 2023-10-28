@@ -25,11 +25,18 @@ class Person {
     name: String
     age: Number
     phone: Number
+
+    
     constructor(name: String, age: Number, phone: Number) {
         this.name = name
         this.age = age
         this.phone = phone
     }
+
+    speak() {
+        console.log(`My name is ${this.name}`)
+    }
+
 }
 
 interface AnotherUser {
@@ -40,7 +47,10 @@ interface AnotherUser {
 interface MorePropertyPerson {
     name: String,
     age: Number,
-    phone: Number
+    phone: Number,
+    speak: () => void
 }
 
-const person: User | MorePropertyPerson = new Person("", 3, 3)
+const person: MorePropertyPerson = new Person("spyke", 3, +23764545167238)
+
+person.speak()
