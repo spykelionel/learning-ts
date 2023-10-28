@@ -1,6 +1,6 @@
 const a: Number = 3
 
-type User  = {
+type User = {
     name: String,
     age: Number
 }
@@ -21,3 +21,26 @@ const user: User = {
     age: 32
 }
 
+class Person {
+    name: String
+    age: Number
+    phone: Number
+    constructor(name: String, age: Number, phone: Number) {
+        this.name = name
+        this.age = age
+        this.phone = phone
+    }
+}
+
+interface AnotherUser {
+    name: String,
+    age: Number
+}
+
+interface MorePropertyPerson {
+    name: String,
+    age: Number,
+    phone: Number
+}
+
+const person: User | MorePropertyPerson = new Person("", 3, 3)
