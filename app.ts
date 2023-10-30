@@ -1,8 +1,8 @@
 const a: Number = 3
 
 type User = {
-    name: String,
-    age: Number
+    name: string,
+    age: number
 }
 
 const users: Array<User> = [
@@ -39,6 +39,12 @@ class Person {
 
 }
 
+class SomeObject {
+    static print(){
+        console.log("This is a static method!")
+    }
+}
+
 interface AnotherUser {
     name: String,
     age: Number
@@ -54,3 +60,22 @@ interface MorePropertyPerson {
 const person: MorePropertyPerson = new Person("spyke", 3, +23764545167238)
 
 person.speak()
+SomeObject.print = () => {
+
+}
+
+class Shape {
+    /* 
+    {
+        @private: name
+    } 
+    */
+    private static _name = "Shape"
+    // [type: Number] Number | Boolean = true
+}
+
+interface NumberOrStringDictionary {
+    length: number; // ok, length is a number
+    name: string; // ok, name is a string
+    [index: string]: number | string; // any special prop
+}
