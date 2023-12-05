@@ -95,3 +95,13 @@ const firstname: String = "Spyke Lionel";
  */
 
 const implicitNAme = "Spyke Lionel";
+
+/**
+ * Special types
+ */
+let u = true;
+// Error: Type 'string' is not assignable to type 'boolean'.
+// u = "string";
+// Error: Argument of type 'boolean' is not assignable to parameter of type 'number'.
+// Math.round(u);
+
