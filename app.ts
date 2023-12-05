@@ -83,3 +83,15 @@ const nos: NumberOrStringDictionary = {
 };
 
 console.log(nos);
+
+/**
+ * Simple Types
+ */
+
+const firstname: String = "Spyke Lionel";
+
+/**
+ * Implicit types
+ */
+
+const implicitNAme = "Spyke Lionel";
