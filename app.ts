@@ -105,3 +105,13 @@ let u = true;
 // Error: Argument of type 'boolean' is not assignable to parameter of type 'number'.
 // Math.round(u);
 
+/**
+ * Arrays
+ */
+const names: string[] = [];
+names.push("Dylan"); // no error
+
+const names2: readonly string[] = ["Dylan"];
+// Error: Property 'push' does not exist on type 'readonly string[]'.
+// names2.push("Jack");
+// try removing the readonly modifier and see if it works?
