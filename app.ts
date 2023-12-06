@@ -155,3 +155,25 @@ const car3: { type: string; mileage?: number } = {
   type: "Toyota",
 };
 car3.mileage = 2000;
+
+/**
+ * Index Signatures
+ */
+const nameAgeMap: { [index: number]: number } = {};
+nameAgeMap["23"] = 25; // no error
+// nameAgeMap.Mark = "Fifty"; // Error: Type 'string' is not assignable to type 'number'.
+
+function Logger(constructor: Function) {
+  console.log("Loggin");
+  console.log("Constructor");
+}
+
+@Logger
+class Per1 {
+  person = "A person";
+  constructor() {
+    console.log("Creating this object");
+  }
+}
+
+const p = new Per1();
