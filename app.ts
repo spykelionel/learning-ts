@@ -115,3 +115,33 @@ const names2: readonly string[] = ["Dylan"];
 // Error: Property 'push' does not exist on type 'readonly string[]'.
 // names2.push("Jack");
 // try removing the readonly modifier and see if it works?
+
+/**
+ * Object types
+ */
+const car: { type: string; model: string; year: number } = {
+  type: "Toyota",
+  model: "Corolla",
+  year: 2009,
+};
+
+/**
+ * Alternative Object types
+ */
+
+interface Car {
+  type: string;
+  model: string;
+  year: number;
+}
+
+const car2: Car = {
+  type: "Toyota",
+  model: "Corolla",
+  year: 2009,
+};
+
+Object.freeze(car2);
+car2.model = "Meccedess";
+
+console.log(car2);
