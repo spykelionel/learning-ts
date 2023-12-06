@@ -145,3 +145,13 @@ Object.freeze(car2);
 car2.model = "Meccedess";
 
 console.log(car2);
+
+/**
+ * Optional properties
+ */
+
+const car3: { type: string; mileage?: number } = {
+  // no error
+  type: "Toyota",
+};
+car3.mileage = 2000;
